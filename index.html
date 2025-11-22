@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkinMen - Cuidados Masculinos</title>
+    <style>
+        /* --- CONFIGURAÇÕES GERAIS (CSS) --- */
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #1a1a1a;
+            --accent-color: #000000;
+            --gray-light: #f4f4f4;
+            --font-serif: 'Georgia', 'Times New Roman', serif;
+            --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* --- CABEÇALHO --- */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .logo {
+            max-width: 250px;
+            height: auto;
+        }
+
+        /* --- ÁREA DE DESTAQUE (HERO) --- */
+        .hero {
+            text-align: center;
+            padding: 60px 20px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: normal;
+        }
+
+        .hero p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        /* --- TÍTULOS DAS SEÇÕES --- */
+        .section-title {
+            text-align: center;
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            margin: 60px 0 20px;
+            padding-bottom: 10px;
+            position: relative;
+        }
+        
+        /* Pequeno traço abaixo do título */
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--accent-color);
+            margin: 10px auto 0;
+        }
+
+        /* --- VITRINE DE PRODUTOS --- */
+        .products-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            padding: 20px 20px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Estilo do Card do Produto */
+        .product-card {
+            background: #fff;
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+            
+            /* Estado inicial para animação */
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .product-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .product-card:hover {
+            border-color: var(--gray-light);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .product-img {
+            width: 100%;
+            height: 300px;
+            object-fit: contain;
+            margin-bottom: 20px;
+            /* Filtro leve para harmonizar fotos diferentes, remove se não gostar */
+            filter: contrast(1.05); 
+        }
+
+        .product-title {
+            font-family: var(--font-serif);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            min-height: 50px; /* Alinha os títulos */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-desc {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 20px;
+            list-style: none;
+            text-align: left;
+            padding-left: 15px;
+            min-height: 100px; /* Mantém os botões alinhados */
+        }
+
+        .product-desc li {
+            margin-bottom: 5px;
+            padding-left: 10px;
+            border-left: 2px solid var(--accent-color);
+        }
+
+        /* Botão de Compra */
+        .btn-buy {
+            display: inline-block;
+            width: 100%;
+            padding: 12px 0;
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-buy:hover {
+            background-color: #333;
+            cursor: pointer;
+        }
+
+        /* --- RODAPÉ --- */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: var(--gray-light);
+            font-size: 0.8rem;
+            color: #777;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .products-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .product-card {
+                width: 100%;
+                max-width: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="logo.png" alt="SkinMen Logo" class="logo">
+    </header>
+
+    <section class="hero">
+        <h1>Cuidados Essenciais. Sem Complicações.</h1>
+        <p>A melhor seleção de skincare para o homem moderno.</p>
+    </section>
+
+    <h2 class="section-title">Seleção Principia</h2>
+    <section class="products-container">
+        
+        <article class="product-card">
+            <img src="produto1.png" alt="Kit Pele Sensível" class="product-img">
+            <h3 class="product-title">Kit Pele Sensível</h3>
+            <ul class="product-desc">
+                <li>Gel de Limpeza (GL-02)</li>
+                <li>Protetor Solar FPS 60</li>
+                <li>Reduz oleosidade</li>
+            </ul>
+            <a href="https://mercadolivre.com/sec/147SW8J" target="_blank" class="btn-buy">Comprar Agora</a>
+        </article>
+
+        <article class="product-card">
+            <img src="produto2.png" alt="Kit Anti-acne" class="product-img">
+            <h3 class="product-title">Kit Anti-Acne Trio</h3>
+            <ul class="product-desc">
+                <li>Gel GL-01 + Sérum Mix-01</li>
+                <li>Protetor Solar FPS 60</li>
+                <li>Combate acne severa</li>
+            </ul>
+            <a href="https://mercadolivre.com/sec/23E6NKL" target="_blank" class="btn-buy">Comprar Agora</a>
+        </article>
+
+        <article class="product-card">
+            <img src="produto3.png" alt="Kit Rotina Diária" class="product-img">
+            <h3 class="product-title">Kit Hidratação Diária</h3>
+            <ul class="product-desc">
+                <li>Gel GL-03 + Hidratante</li>
+                <li>Protetor Solar FPS 60</li>
+                <li>Recupera o viço</li>
+            </ul>
+            <a href="https://mercadolivre.com/sec/2VV61Aq" target="_blank" class="btn-buy">Comprar Agora</a>
+        </article>
+
+    </section>
+
+    <h2 class="section-title">Linha Major</h2>
+    <section class="products-container">
+
+        <article class="product-card">
+            <img src="major1.png" alt="Sérum Antioleosidade" class="product-img">
+            <h3 class="product-title">Sérum Antioleosidade</h3>
+            <ul class="product-desc">
+                <li>Niacinamida + Zinco PCA</li>
+                <li>Controla a oleosidade</li>
+                <li>Reduz poros dilatados</li>
+            </ul>
+            <a href="https://mercadolivre.com/sec/1em4Adv" target="_blank" class="btn-buy">Comprar Agora</a>
+        </article>
+
+        <article class="product-card">
+            <img src="major4.png" alt="Sérum Antiolheiras" class="product-img">
+            <h3 class="product-title">Sérum Antiolheiras</h3>
+            <ul class="product-desc">
+                <li>Cafeína + Ácido Ferúlico</li>
+                <li>Previne e reduz olheiras</li>
+                <li>Ação antioxidante</li>
+            </ul>
+            <a href="https://mercadolivre.com/sec/2TpgttS" target="_blank" class="btn-buy">Comprar Agora</a>
+        </article>
+
+        <article class="product-card">
+            <img src="major2.png" alt="Sérum Antiacne" class="product-img">
+            <h3 class="product-title">Sérum Antiacne</h3>
+            <ul class="product-desc">
+                <li>Ácido Mandélico + Arbutin</li>
+                <li>Trata e combate manchas</li>
+                <li>Reduz inflamações</li>
+            </ul>
+            <a href="https://mercadolivre.com/sec/2eqet7E" target="_blank" class="btn-buy">Comprar Agora</a>
+        </article>
+
+        <article class="product-card">
+            <img src="major5.png" alt="Esfoliante Facial" class="product-img">
+            <h3 class="product-title">Esfoliante Facial</h3>
+            <ul class="product-desc">
+                <li>Limpeza Profunda</li>
+                <li>Retira as impurezas</li>
+                <li>Desobstrui os poros</li>
+            </ul>
+            <a href="https://mercadolivre.com/sec/2o5m3N9" target="_blank" class="btn-buy">Comprar Agora</a>
+        </article>
+
+         <article class="product-card">
+            <img src="major3.png" alt="Sérum Antissinais" class="product-img">
+            <h3 class="product-title">Sérum Antissinais</h3>
+            <ul class="product-desc">
+                <li>Ácido Hialurônico + Vit. C</li>
+                <li>Revitaliza e tonifica</li>
+                <li>Hidratação potente</li>
+            </ul>
+            <a href="https://mercadolivre.com/sec/1LuiAyK" target="_blank" class="btn-buy">Comprar Agora</a>
+        </article>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2025 SkinMen. Seleção oficial de produtos.</p>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        const cards = document.querySelectorAll('.product-card');
+        cards.forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+
+</body>
+</html>
