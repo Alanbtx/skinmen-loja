@@ -17,7 +17,7 @@
             --accent-color: #000000;
             --gray-light: #f4f4f4;
             --font-serif: 'Georgia', 'Times New Roman', serif;
-            --font-logo: 'Playfair Display', serif; /* Fonte exclusiva da Logo */
+            --font-logo: 'Playfair Display', serif;
             --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
         }
 
@@ -31,7 +31,7 @@
             line-height: 1.6;
         }
 
-        /* --- BARRA DE NAVEGAÇÃO PRETA --- */
+        /* --- BARRA DE NAVEGAÇÃO --- */
         .top-nav {
             background-color: var(--accent-color);
             padding: 15px 0;
@@ -39,13 +39,16 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
         .nav-links {
             display: flex;
             justify-content: center;
+            align-items: center;
             gap: 30px;
             list-style: none;
+            padding: 0 20px;
         }
 
         .nav-links a {
@@ -56,25 +59,25 @@
             letter-spacing: 1px;
             font-weight: bold;
             transition: opacity 0.3s;
+            white-space: nowrap; /* Evita que o texto quebre no meio da palavra */
         }
 
         .nav-links a:hover { opacity: 0.7; }
 
-        /* --- CABEÇALHO COM LOGO EM TEXTO --- */
+        /* --- HEADER COM LOGO --- */
         header {
             text-align: center;
             padding: 40px 20px;
             border-bottom: 1px solid var(--gray-light);
         }
 
-        /* Estilo da Logo em Texto */
         .text-logo {
             font-family: var(--font-logo);
-            font-size: 3.5rem; /* Tamanho grande */
+            font-size: 3.5rem;
             color: var(--accent-color);
             text-decoration: none;
             font-weight: 700;
-            letter-spacing: -1.5px; /* Letras mais juntinhas para parecer logo */
+            letter-spacing: -1.5px;
         }
 
         /* --- HERO --- */
@@ -112,7 +115,7 @@
             margin: 10px auto 0;
         }
 
-        /* Container de Produtos */
+        /* --- PRODUTOS --- */
         .products-container {
             display: flex;
             flex-wrap: wrap;
@@ -123,7 +126,6 @@
             margin: 0 auto;
         }
 
-        /* Card do Produto */
         .product-card {
             background: #fff;
             width: 300px;
@@ -191,7 +193,7 @@
 
         .btn-buy:hover { background-color: #333; }
 
-        /* --- ÁREA "EM BREVE" --- */
+        /* --- EXTRAS --- */
         .coming-soon {
             text-align: center;
             padding: 40px;
@@ -201,20 +203,40 @@
             border-radius: 4px;
         }
 
-        /* --- RODAPÉ (Restaurado ao original) --- */
         footer {
             text-align: center;
             padding: 20px;
             background-color: var(--gray-light);
             font-size: 0.8rem;
             color: #777;
-            /* Removemos margens extras para ficar compacto como no início */
         }
 
+        /* --- AJUSTES PARA CELULAR (AQUI ESTÁ A MÁGICA) --- */
         @media (max-width: 768px) {
-            .nav-links { flex-direction: column; gap: 15px; padding: 0 10px; }
-            .products-container { flex-direction: column; align-items: center; }
-            .text-logo { font-size: 2.8rem; }
+            /* Menu: Mantém horizontal e permite quebra suave */
+            .nav-links {
+                flex-wrap: wrap; /* Permite quebrar linha se não couber */
+                gap: 15px; /* Menos espaço entre os itens */
+                padding: 5px;
+            }
+            
+            /* Texto do menu menor no celular */
+            .nav-links a {
+                font-size: 0.70rem; 
+            }
+
+            .top-nav {
+                padding: 10px 0; /* Barra mais fina */
+            }
+
+            .text-logo {
+                font-size: 2.5rem; /* Logo um pouco menor */
+            }
+
+            .products-container {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
