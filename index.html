@@ -59,7 +59,7 @@
             letter-spacing: 1px;
             font-weight: bold;
             transition: opacity 0.3s;
-            white-space: nowrap; /* Evita que o texto quebre no meio da palavra */
+            white-space: nowrap;
         }
 
         .nav-links a:hover { opacity: 0.7; }
@@ -211,26 +211,24 @@
             color: #777;
         }
 
-        /* --- AJUSTES PARA CELULAR (AQUI ESTÁ A MÁGICA) --- */
+        /* --- AJUSTES PARA CELULAR --- */
         @media (max-width: 768px) {
-            /* Menu: Mantém horizontal e permite quebra suave */
             .nav-links {
-                flex-wrap: wrap; /* Permite quebrar linha se não couber */
-                gap: 15px; /* Menos espaço entre os itens */
+                flex-wrap: wrap;
+                gap: 15px;
                 padding: 5px;
             }
             
-            /* Texto do menu menor no celular */
             .nav-links a {
                 font-size: 0.70rem; 
             }
 
             .top-nav {
-                padding: 10px 0; /* Barra mais fina */
+                padding: 10px 0;
             }
 
             .text-logo {
-                font-size: 2.5rem; /* Logo um pouco menor */
+                font-size: 2.5rem;
             }
 
             .products-container {
@@ -356,21 +354,149 @@
         </section>
     </div>
 
+    <!-- NOVA SEÇÃO BARBA E CABELO -->
     <div id="barba">
         <h2 class="section-title">Barba e Cabelo</h2>
-        <div class="coming-soon">
-            <h3>Novidades a caminho</h3>
-            <p>Estamos selecionando os melhores produtos para você.</p>
-        </div>
+        <section class="products-container">
+            <article class="product-card">
+                <img src="barba1.png" alt="Kit Completo para Barba" class="product-img">
+                <h3 class="product-title">Kit Crescimento de Barba</h3>
+                <ul class="product-desc">
+                    <li>Ajuda no Crescimento</li>
+                    <li>Evita Quedas Fortalecendo a Raiz</li>
+                    <li>Ação Rápida</li>
+                </ul>
+                <a href="https://mercadolivre.com/sec/2S5XewB" target="_blank" class="btn-buy">Comprar Agora</a>
+            </article>
+
+            <article class="product-card">
+                <img src="barba2.png" alt="Balm Hidratante para Barba" class="product-img">
+                <h3 class="product-title">Kit Completo para Barba</h3>
+                <ul class="product-desc">
+                    <li>Reduz o frizz e o ressecamento</li>
+                    <li>Toque seco, sem pesar</li>
+                    <li>Ajuda a modelar a barba no dia a dia</li>
+                </ul>
+                <a href="https://mercadolivre.com/sec/2dFFZHG" target="_blank" class="btn-buy">Comprar Agora</a>
+            </article>
+
+            <article class="product-card">
+                <img src="barba3.png" alt="Óleo para Barba Premium" class="product-img">
+                <h3 class="product-title">Tônico Capilar</h3>
+                <ul class="product-desc">
+                    <li>Nutrição intensa dos fios</li>
+                    <li>Ajuda no crescimento saudável</li>
+                    <li>Perfume suave e elegante</li>
+                </ul>
+                <a href="https://mercadolivre.com/sec/1b4RR8d" target="_blank" class="btn-buy">Comprar Agora</a>
+            </article>
+
+            <article class="product-card">
+                <img src="barba4.png" alt="Pomada Modeladora para Cabelo" class="product-img">
+                <h3 class="product-title">Kit Cabelo E Barba Bio Extratus</h3>
+                <ul class="product-desc">
+                    <li>Versatilidade</li>
+                    <li>Não resseca os fios</li>
+                    <li>Ideal para uso diário</li>
+                </ul>
+                <a href="https://mercadolivre.com/sec/1LPisYv" target="_blank" class="btn-buy">Comprar Agora</a>
+            </article>
+
+            <article class="product-card">
+                <img src="barba5.png" alt="Shampoo Barba e Cabelo" class="product-img">
+                <h3 class="product-title">Shampoo Barba e Cabelo</h3>
+                <ul class="product-desc">
+                    <li>Limpeza suave, sem agredir</li>
+                    <li>Controla oleosidade excessiva</li>
+                    <li>Deixa sensação de frescor</li>
+                </ul>
+                <a href="https://mercadolivre.com/sec/1aSZR4y" target="_blank" class="btn-buy">Comprar Agora</a>
+            </article>
+
+            <article class="product-card">
+                <img src="barba6.png" alt="Kit Crescimento da Barba" class="product-img">
+                <h3 class="product-title">Shampoo Gengibre For Men</h3>
+                <ul class="product-desc">
+                    <li>Nutrição e redução da oleosidade dos fios</li>
+                    <li>Sensação de refrescância e limpeza profunda</li>
+                    <li>Desenvolvido para atender às necessidades do cabelo masculino</li>
+                </ul>
+                <a href="https://mercadolivre.com/sec/18Se7xs" target="_blank" class="btn-buy">Comprar Agora</a>
+            </article>
+        </section>
     </div>
 
-    <div id="fragrancias">
-        <h2 class="section-title">Fragrâncias</h2>
-        <div class="coming-soon">
-            <h3>Novidades a caminho</h3>
-            <p>Os melhores aromas estão a ser preparados.</p>
-        </div>
-    </div>
+ <div id="fragrancias">
+    <h2 class="section-title">Fragrâncias</h2>
+    <section class="products-container">
+        <article class="product-card">
+            <img src="frag1.png" alt="Fragrância 1" class="product-img">
+            <h3 class="product-title">Egeo Spicy Vibe Colônia 90ml</h3>
+            <ul class="product-desc">
+                <li>Família olfativa: amadeirado.</li>
+                <li>Fragrância Marcante</li>
+                <li>Ideal para homens</li>
+            </ul>
+            <a href="https://mercadolivre.com/sec/1ScD7qi" target="_blank" class="btn-buy">Comprar Agora</a>
+        </article>
+
+        <article class="product-card">
+            <img src="frag2.png" alt="Fragrância 2" class="product-img">
+            <h3 class="product-title">Paris Elysees Dark Caviar Eau de Toillete Masculino 100ml</h3>
+            <ul class="product-desc">
+                <li>Duração aproximada de 12 horas</li>
+                <li>Fragrância amadeirada oriental com notas de tabaco e rum</li>
+                <li>Produto vegano e livre de crueldade</li>
+            </ul>
+            <a href="https://mercadolivre.com/sec/2zArcKJ" target="_blank" class="btn-buy">Comprar Agora</a>
+        </article>
+
+        <article class="product-card">
+            <img src="frag3.png" alt="Fragrância 3" class="product-img">
+            <h3 class="product-title">Perfume Masculino Zino Eau De Toilette Spray 125ml Davidoff</h3>
+            <ul class="product-desc">
+                <li>Aroma: amadeirado</li>
+                <li>lançado no mercado desde 1986</li>
+                <li>excelente relação custo-benefício</li>
+            </ul>
+            <a href="https://mercadolivre.com/sec/1KfudyP" target="_blank" class="btn-buy">Comprar Agora</a>
+        </article>
+
+        <article class="product-card">
+            <img src="frag4.png" alt="Fragrância 4" class="product-img">
+            <h3 class="product-title">Perfume Malbec Gold Deo colônia 100 ml</h3>
+            <ul class="product-desc">
+                <li>fragrância do homem sensual</li>
+                <li>Combina notas cítricas e especiadas com refrescância,</li>
+                <li>para o dia a dia do homem moderno</li>
+            </ul>
+            <a href="https://mercadolivre.com/sec/2EN5v1r" target="_blank" class="btn-buy">Comprar Agora</a>
+        </article>
+
+        <article class="product-card">
+            <img src="frag5.png" alt="Fragrância 5" class="product-img">
+            <h3 class="product-title">Perfume Masculino Avon Black Essential Dark 100 mL</h3>
+            <ul class="product-desc">
+                <li>Família olfativa: ervas madeira</li>
+                <li>perfume para aqueles com espírito aventureiro</li>
+                <li>perfeito para o dia a dia</li>
+            </ul>
+            <a href="https://mercadolivre.com/sec/2ZGVKMn" target="_blank" class="btn-buy">Comprar Agora</a>
+        </article>
+
+        <article class="product-card">
+            <img src="frag6.png" alt="Fragrância 6" class="product-img">
+            <h3 class="product-title">Coffee Man Duo Deo colônia 100ml</h3>
+            <ul class="product-desc">
+                <li>Família olfativa: fougère ambarado amadeirado</li>
+                <li>Apresenta notas refrescantes na abertura</li>
+                <li>Marcante e inesquecível</li>
+            </ul>
+            <a href="https://mercadolivre.com/sec/1UsmrQC" target="_blank" class="btn-buy">Comprar Agora</a>
+        </article>
+    </section>
+</div>
+
 
     <footer>
         <p>&copy; 2025 SkinMen. Todos os direitos reservados.</p>
